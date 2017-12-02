@@ -1,7 +1,7 @@
 <h1>New Blog Post</h1>
 
 
-<%= form_for @article do |form| %>
+<%= form_for @article, html: { multipart: true } do |form| %>
 
   <p>
     <%= form.label :title %><br>
@@ -10,7 +10,7 @@
  
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.cktext_area :text %>
   </p>
  
   <p>

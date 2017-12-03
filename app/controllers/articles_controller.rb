@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
     end
     
     def create
+        Mailer.sample_email(User.first).deliver_now
         @article = Article.new(article_params)
  
         if @article.save

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Gem for hiding sensitive info
+gem "figaro"
+# Gem for editing text
 gem 'ckeditor'
 # Gem used for image upload support
 gem "paperclip", "~> 5.0.0"

@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
         @article = Article.new(article_params)
  
         if @article.save
-          ArticlesMailer.article_notification(@article).deliver
+          ArticlesMailer.article_notification(@user, @article).deliver_now
           flash[:success] = "Article Successfully Created!"
           redirect_to @article
         else

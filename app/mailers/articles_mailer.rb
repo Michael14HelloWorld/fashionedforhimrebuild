@@ -1,8 +1,9 @@
 class ArticlesMailer < ApplicationMailer
     default from: 'bgmichael1400@gmail.com'
 
-    def article_notification(article)
+    def article_notification(user, article)
+        @user = user
         @article = article
-        mail(to: 'bgmichael1400@gmail.com', subject: 'New Blog Article!')
+        mail(to: @user.try(:email), subject: 'New Blog Article!')
     end
 end

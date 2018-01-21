@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "figaro"
 gem 'ckeditor'
 # Gem used for image upload support
 gem "paperclip", "~> 5.0.0"

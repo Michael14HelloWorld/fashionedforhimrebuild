@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
         @article = Article.new(article_params)
  
         if @article.save
+          ArticlesMailer.articles_notification(@article).deliver
           redirect_to @article
         else
           render 'new'
